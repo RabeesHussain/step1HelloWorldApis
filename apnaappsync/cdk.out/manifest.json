@@ -1,0 +1,136 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "ApnaAppsyncStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ApnaAppsyncStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ApnaAppsyncStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ApnaAppsyncStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/010d83bf39bfae5a3ca2a663e3e9ba49b8bed87fdb02cc4659e106c53c5432e3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ApnaAppsyncStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ApnaAppsyncStack.assets"
+      ],
+      "metadata": {
+        "/ApnaAppsyncStack/api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiC8550315"
+          }
+        ],
+        "/ApnaAppsyncStack/api/Schema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiSchema0EA92056"
+          }
+        ],
+        "/ApnaAppsyncStack/api/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiDefaultApiKey6AB8D7C4"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apidsServiceRoleBDB08107"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apidsServiceRoleDefaultPolicy5634EFD0"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apids4328272F"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/MutationaddTodoResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apidsMutationaddTodoResolver2A85159A"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/QuerygetTodosResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apidsQuerygetTodosResolver08EDEF02"
+          }
+        ],
+        "/ApnaAppsyncStack/api/ds/MutationupdateTodoResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apidsMutationupdateTodoResolver4D56020C"
+          }
+        ],
+        "/ApnaAppsyncStack/apnaappsynctestLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apnaappsynctestLambdaServiceRoleA7475ED9"
+          }
+        ],
+        "/ApnaAppsyncStack/apnaappsynctestLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apnaappsynctestLambda0F86AA2C"
+          }
+        ],
+        "/ApnaAppsyncStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ApnaAppsyncStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ApnaAppsyncStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ApnaAppsyncStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ApnaAppsyncStack"
+    }
+  }
+}

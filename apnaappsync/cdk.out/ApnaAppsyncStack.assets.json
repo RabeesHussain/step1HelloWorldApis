@@ -1,0 +1,32 @@
+{
+  "version": "21.0.0",
+  "files": {
+    "4b75ba8804753cc9a8ecff74d813876c0126963861db864d258d4afbca797b50": {
+      "source": {
+        "path": "asset.4b75ba8804753cc9a8ecff74d813876c0126963861db864d258d4afbca797b50",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4b75ba8804753cc9a8ecff74d813876c0126963861db864d258d4afbca797b50.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "010d83bf39bfae5a3ca2a663e3e9ba49b8bed87fdb02cc4659e106c53c5432e3": {
+      "source": {
+        "path": "ApnaAppsyncStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "010d83bf39bfae5a3ca2a663e3e9ba49b8bed87fdb02cc4659e106c53c5432e3.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
